@@ -1,0 +1,70 @@
+{
+  "name": "react-presenter",
+  "version": "0.1.0",
+  "description": "Clean presentation logic for React and Next.js applications with TypeScript presenters. The core is framework-agnostic and also works with NestJS, Angular, Vue.js, and Node.js.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./react": {
+      "types": "./dist/react.d.ts",
+      "import": "./dist/react.js",
+      "require": "./dist/react.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup && node scripts/add-use-client.mjs",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "peerDependencies": {
+    "react": ">=17"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.0",
+    "jsdom": "^30.0.1",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.1",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  },
+  "keywords": [
+    "react",
+    "nextjs",
+    "nestjs",
+    "angular",
+    "presenter",
+    "decorator",
+    "view-model",
+    "serializer",
+    "presentation",
+    "view-present",
+    "ts-presenter"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
