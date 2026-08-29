@@ -486,6 +486,6 @@ npm run build       # tsup → dist/{index,react}.{js,cjs,d.ts}
 npm test            # vitest run
 ```
 
-## License
+## Contributing OR Fix a bug?
 
-MIT
+Please read the [Contributing Guidelines](https://github.com/salmanx/react-presenter/blob/main/CONTRIBUTING.md).
